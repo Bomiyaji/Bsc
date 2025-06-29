@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Notes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Study Notes</h1>
+    <div class="mood-toggle">
+      <button onclick="toggleMood()">Toggle Mood</button>
+    </div>
+
+    <section class="notes-section">
+      <h2>Quick Note (Priya ➝ Rajesh)</h2>
+      <textarea id="quickNote" placeholder="Type a quick note..."></textarea>
+      <button onclick="saveQuickNote()">Save Quick Note</button>
+    </section>
+
+    <section class="bsc-notes-section">
+      <h2>BSC Notes (Rajesh ➝ Priya)</h2>
+      <input type="password" id="bscPassword" placeholder="Enter password" />
+      <button onclick="unlockBSCNotes()">Unlock Notes</button>
+      <textarea id="bscNotes" placeholder="Private notes" style="display:none;"></textarea>
+      <button id="saveBSCButton" onclick="saveBSCNotes()" style="display:none;">Save BSC Notes</button>
+    </section>
+  </div>
+
+  <script src="firebase-config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
