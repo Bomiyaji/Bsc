@@ -4,26 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Study Notes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="app-container">
-    <h1>📘 Study Notes</h1>
-    <div class="section">
-      <h2>Quick Note</h2>
-      <textarea id="quickNote" placeholder="Write something..."></textarea>
-      <button onclick="saveQuickNote()">Save</button>
-    </div>
-    <div class="section">
-      <h2>Secure Notes (Admin ➝ User)</h2>
-      <input type="password" id="securePassword" placeholder="Enter password" />
-      <button onclick="unlockSecureNote()">Unlock</button>
-      <div id="secureContent" class="hidden">
-        <textarea id="secureNote" placeholder="Your secure note..."></textarea>
-        <button onclick="saveSecureNote()">Save Secure Note</button>
-      </div>
-    </div>
+  <div class="app">
+    <header>
+      <h1>📘 Study Notes</h1>
+      <p>Your personal, secure note manager</p>
+    </header>
+
+    <main>
+      <section class="note-section">
+        <h2>📝 Quick Note</h2>
+        <textarea id="quickNote" placeholder="Write a quick note..."></textarea>
+        <button onclick="saveQuickNote()">💾 Save Note</button>
+      </section>
+
+      <section class="note-section secure">
+        <h2>🔐 Secure Notes</h2>
+        <input type="password" id="securePassword" placeholder="Enter password to unlock" />
+        <button onclick="unlockSecureNote()">🔓 Unlock</button>
+
+        <div id="secureContent" class="hidden">
+          <textarea id="secureNote" placeholder="Enter your secure note..."></textarea>
+          <button onclick="saveSecureNote()">💾 Save Secure Note</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Made with ❤️ for personal use</p>
+    </footer>
   </div>
+
   <script src="main.js"></script>
 </body>
 </html>
