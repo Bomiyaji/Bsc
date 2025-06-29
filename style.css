@@ -1,46 +1,94 @@
-body {
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f6fa;
-  color: #2f3640;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f0f2f5;
+  color: #333;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding: 40px 10px;
   min-height: 100vh;
 }
 
-.app-container {
+.app {
   background: white;
-  padding: 2rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-radius: 10px;
-  width: 90%;
-  max-width: 500px;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 
-.section {
-  margin-top: 2rem;
+header h1 {
+  font-size: 2rem;
+  color: #007BFF;
+}
+
+header p {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.note-section {
+  margin-top: 30px;
+}
+
+.note-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #333;
 }
 
 textarea {
   width: 100%;
-  height: 100px;
-  padding: 0.5rem;
+  height: 120px;
+  padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
   resize: none;
+  font-size: 1rem;
+}
+
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
 }
 
 button {
-  margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: #00a8ff;
-  border: none;
-  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #007BFF;
   color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
 
 .hidden {
   display: none;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
 }
